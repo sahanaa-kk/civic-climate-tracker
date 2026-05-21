@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) rotate(0deg) scale(0.8); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { transform: translateY(-10vh) rotate(360deg) scale(1.2); opacity: 0; }
+}
+
+.floating-leaf {
+  position: absolute;
+  color: #22c55e;
+  animation: float 15s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
